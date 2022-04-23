@@ -20,7 +20,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     List<Integer> images;
     LayoutInflater inflater;
     Context ctx;
-    //test 2
 
 
     public MainAdapter(Context ctx, List<String> titles, List<Integer> images){
@@ -60,9 +59,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    //Chọn Mục ngoài trang chủ
                     if(getAdapterPosition() == 1){
                         ctx.startActivity(new Intent(ctx, StepCounterActivity.class));
+                    } else if(getAdapterPosition() == 2){
+                        ctx.startActivity(new Intent(ctx, HeartRateActivity .class));
                     }
+
                 }
             });
 

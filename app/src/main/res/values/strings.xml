@@ -2,7 +2,7 @@
     <string name="app_name">DoAn</string>
 
     <string name="online_pharmacy">Online\nPharmacy</string>
-    <string name="hint_search">Search for drugs,doctors,etc,...</string>
+    <string name="hint_search">Tìm kiếm...</string>
     <string name="shop_by_category">Danh mục sản phẩm</string>
     <string name="popular_products">Sản phẩm nổi bật</string>
     <string name="consultation">Consultation</string>
