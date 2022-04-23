@@ -20,6 +20,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     List<Integer> images;
     LayoutInflater inflater;
     Context ctx;
+    //test
 
 
     public MainAdapter(Context ctx, List<String> titles, List<Integer> images){
