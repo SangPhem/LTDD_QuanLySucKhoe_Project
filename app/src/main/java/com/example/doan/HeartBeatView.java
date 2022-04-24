@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class HeartBeatView extends View {
-
+//test
     private static final Matrix matrix = new Matrix();
     private static final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
