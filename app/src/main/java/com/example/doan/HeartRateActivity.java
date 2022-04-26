@@ -144,7 +144,6 @@ public class HeartRateActivity extends AppCompatActivity {
             averageArray[averageIndex] = imgAvg;
             averageIndex++;
 
-            // Transitioned from one state to another to the same
             if (newType != currentType) {
                 currentType = newType;
                 image.postInvalidate();
@@ -161,9 +160,6 @@ public class HeartRateActivity extends AppCompatActivity {
                     processing.set(false);
                     return;
                 }
-
-                // Log.d(TAG,
-                // "totalTimeInSecs="+totalTimeInSecs+" beats="+beats);
 
                 if (beatsIndex == beatsArraySize) beatsIndex = 0;
                 beatsArray[beatsIndex] = dpm;
