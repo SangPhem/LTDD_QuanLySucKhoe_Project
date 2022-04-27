@@ -66,8 +66,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
                         ctx.startActivity(new Intent(ctx, StepCounterActivity.class));
                     } else if(getAdapterPosition() == 2){
                         ctx.startActivity(new Intent(ctx, HeartRateActivity .class));
+                    } else if(getAdapterPosition() == 3) {
+                        ctx.startActivity(new Intent(ctx, BMITrackerActivity.class));
                     }
-
                 }
             });
 

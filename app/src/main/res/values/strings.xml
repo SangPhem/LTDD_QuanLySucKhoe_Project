@@ -42,6 +42,9 @@
     <string name="increment_number">+232325</string>
     <string name="number">2323236544</string>
 
+    <string name="cm">   cm</string>
+    <string name="_18_5_25_kg_m2">18.5 - 25 kg/m2</string>
+
 
     <string name="app_name1">Covid Tracker</string>
 </resources>

@@ -21,11 +21,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAn">
         <activity
+            android:name=".BMIResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BMITrackerActivity"
+            android:exported="false" />
+        <activity
             android:name=".WaterTrackerActivity"
             android:exported="false" />
         <activity
             android:name=".CovidTrackerActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".HeartRateActivity"
             android:exported="false" />
