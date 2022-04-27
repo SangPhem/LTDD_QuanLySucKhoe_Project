@@ -66,8 +66,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 auth.signOut();
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 finish();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
 
             }
         });
