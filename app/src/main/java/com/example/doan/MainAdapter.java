@@ -60,7 +60,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
                 @Override
                 public void onClick(View view) {
                     //Chọn Mục ngoài trang chủ
-                    if(getAdapterPosition() == 1){
+                    if(getAdapterPosition() == 0) {
+                        ctx.startActivity(new Intent(ctx, WaterTrackerActivity.class));
+                    } else if(getAdapterPosition() == 1){
                         ctx.startActivity(new Intent(ctx, StepCounterActivity.class));
                     } else if(getAdapterPosition() == 2){
                         ctx.startActivity(new Intent(ctx, HeartRateActivity .class));

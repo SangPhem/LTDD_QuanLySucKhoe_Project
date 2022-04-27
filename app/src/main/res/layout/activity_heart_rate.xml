@@ -18,13 +18,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="200dp"/>
-    <TextView android:id="@+id/text"
-        android:text="0"
+    <TextView
+        android:id="@+id/text"
+        android:text="0 bpm"
         android:textSize="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="250dp">
+        android:layout_marginTop="150dp">
     </TextView>
     <LinearLayout
         android:id="@+id/top"
@@ -39,7 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp">
         </com.example.doan.HeartBeatView>
 
     </LinearLayout>

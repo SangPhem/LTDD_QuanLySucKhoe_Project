@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lượng nước");
         titles.add("Bước chân");
         titles.add("Nhịp tim");
-        titles.add(":D");
+        titles.add("Theo dõi BMI");
 
         images.add(R.drawable.blank);
         images.add(R.drawable.stepcounter);
         images.add(R.drawable.heartrate);
-        images.add(R.drawable.blank);
+        images.add(R.drawable.bmiicon);
 
         mainAdapter = new MainAdapter(this, titles, images);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);

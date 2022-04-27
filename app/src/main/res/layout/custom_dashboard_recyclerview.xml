@@ -18,15 +18,16 @@
 
         <com.mikhaellopez.circularfillableloaders.CircularFillableLoaders
             android:id="@+id/watertracker"
-            android:layout_width="match_parent"
+            android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="48dp"
             app:cfl_border="true"
             app:cfl_border_width="3dp"
             app:cfl_progress="60"
             app:cfl_wave_amplitude="0.5"
             app:cfl_wave_color="@color/color_9"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp">
 
         </com.mikhaellopez.circularfillableloaders.CircularFillableLoaders>
 
@@ -35,7 +36,9 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             app:srcCompat="@drawable/stepcounter"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"/>
 
         <TextView
             android:id="@+id/textView"
