@@ -172,6 +172,7 @@ public class BMITrackerActivity extends AppCompatActivity {
         Intent intent = new Intent(BMITrackerActivity.this,BMIResultActivity.class);
         intent.putExtra("BMI",BMI);
         intent.putExtra("age",age.getText().toString());
+        finish();
         startActivity(intent);
     }
 }

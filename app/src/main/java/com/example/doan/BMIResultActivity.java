@@ -25,7 +25,7 @@ public class BMIResultActivity extends AppCompatActivity {
 
         TextView age = findViewById(R.id.age);
         age.setText(age_value);
-
+        //Test
 //        TextView category = findViewById(R.id.category);
 //        Category category1 = new Category();
 //        category.setText(category1.getCategory(BMI));
@@ -56,6 +56,7 @@ public class BMIResultActivity extends AppCompatActivity {
 
     private void updateUI() {
         Intent intent1 = new Intent(BMIResultActivity.this,BMITrackerActivity.class);
+        finish();
         startActivity(intent1);
         fileList();
     }
