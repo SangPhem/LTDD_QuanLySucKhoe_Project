@@ -5,6 +5,7 @@ plugins {
 
 android {
     compileSdk 32
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "com.example.doan"

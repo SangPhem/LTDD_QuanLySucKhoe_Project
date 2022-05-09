@@ -21,6 +21,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAn">
         <activity
+            android:name=".CreateWeight"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".WeightTrackerActivity"
+            android:exported="false" />
+        <activity
             android:name=".BMIResultActivity"
             android:exported="false" />
         <activity
