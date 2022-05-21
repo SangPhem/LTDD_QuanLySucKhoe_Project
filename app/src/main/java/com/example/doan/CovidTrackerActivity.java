@@ -45,7 +45,7 @@ public class CovidTrackerActivity extends AppCompatActivity implements AdapterVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_covid_tracker);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         countryCodePicker=findViewById(R.id.ccp);
         mtodayactive=findViewById(R.id.todayactive);
         mactive=findViewById(R.id.activecase);
@@ -118,13 +118,13 @@ public class CovidTrackerActivity extends AppCompatActivity implements AdapterVi
                 {
                     if (modelClassList.get(i).getCountry().equals(country))
                     {
-                        mactive.setText((modelClassList.get(i).getActive()));
-                        mtodaydeaths.setText((modelClassList.get(i).getTodayDeaths()));
-                        mtodayrecoverd.setText((modelClassList.get(i).getTodayRecovered()));
-                        mtodaytotal.setText((modelClassList.get(i).getTodayCases()));
-                        mtotal.setText(NumberFormat.getInstance().format(modelClassList.get(i).getCases()));
-                        mdeaths.setText(NumberFormat.getInstance().format(modelClassList.get(i).getDeaths()));
-                        mrecovered.setText(NumberFormat.getInstance().format(modelClassList.get(i).getRecovered()));
+                        mactive.setText(modelClassList.get(i).getActive());
+                        mtodaydeaths.setText(modelClassList.get(i).getTodayDeaths());
+                        mtodayrecoverd.setText(modelClassList.get(i).getTodayRecovered());
+                        mtodaytotal.setText(modelClassList.get(i).getTodayCases());
+                        mtotal.setText(modelClassList.get(i).getCases());
+                        mdeaths.setText(modelClassList.get(i).getDeaths());
+                        mrecovered.setText(modelClassList.get(i).getRecovered());
 
 
                         int active,total,recovered,deaths;
