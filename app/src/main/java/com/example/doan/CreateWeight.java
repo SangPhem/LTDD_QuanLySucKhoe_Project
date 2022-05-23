@@ -16,6 +16,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
+import android.icu.util.Calendar;
+
 import java.nio.MappedByteBuffer;
 
 public class CreateWeight extends AppCompatActivity {
@@ -55,7 +59,7 @@ public class CreateWeight extends AppCompatActivity {
                 else
                 {
                     DocumentReference documentReference = firebaseFirestore.collection("weights").document(firebaseUser.getUid()).collection("myWeights").document();
-                    Map<String, Object> weight = new HashMap<>();
+                    Map<String, Object> weights = new HashMap<>();
                 }
             }
         });
