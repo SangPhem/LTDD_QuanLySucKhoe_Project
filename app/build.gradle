@@ -54,7 +54,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore' // firestore
     implementation 'com.google.firebase:firebase-firestore:21.4.0'
 
-
+    //Map
+    implementation 'com.android.volley:volley:1.1.1'
 
     //material dialog
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
