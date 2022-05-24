@@ -4,25 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateWeight">
-
-
+    tools:context=".WeightDetails">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbarweight"
+        android:id="@+id/toolbarweightdetails"
         android:background="@color/white">
 
     </androidx.appcompat.widget.Toolbar>
 
 
-    <EditText
-        android:id="@+id/createweight"
+    <TextView
+        android:id="@+id/weightdetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:hint="Nhập cân nặng của bạn vào đây"
+        android:hint="Weight Hare"
         android:inputType="number"
         android:paddingLeft="10dp"
         android:paddingTop="30dp"
@@ -30,17 +28,17 @@
         android:textSize="25dp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/createweightdate"
+    <TextView
+        android:id="@+id/weightdatedetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:hint="Nhấn để chọn ngày"
-        android:textSize="20dp"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:textSize="20dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/saveweight"
+        android:id="@+id/gotoeditweight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -50,17 +48,9 @@
         android:layout_marginBottom="30dp"
         app:backgroundTint="@color/color_9"
         app:tint="@color/white"
-        android:src="@drawable/ic_baseline_save_alt_24"
+        android:src="@drawable/ic_baseline_edit_24"
         app:maxImageSize="40dp">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/createweight_progressbar"
-        android:layout_centerInParent="true"
-        android:visibility="invisible"
-        android:layout_marginTop="550dp"/>
 
 </RelativeLayout>

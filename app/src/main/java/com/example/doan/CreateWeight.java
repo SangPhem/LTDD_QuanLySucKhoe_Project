@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -39,6 +40,8 @@ public class CreateWeight extends AppCompatActivity {
     FirebaseFirestore firebaseFirestore;
     DatePickerDialog.OnDateSetListener setListener;
 
+    ProgressBar mcreateprogressbar;
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,8 @@ public class CreateWeight extends AppCompatActivity {
         mcreateweight = findViewById(R.id.createweight);
         mcreateweightdate = findViewById(R.id.createweightdate);
 
+        mcreateprogressbar = findViewById(R.id.createweight_progressbar);
+
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
@@ -58,7 +63,7 @@ public class CreateWeight extends AppCompatActivity {
             public void onClick(View v) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(CreateWeight.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                    public void onDateSet(DatePicker view, int year, int month, int day) {
                         month = month + 1;
                         String date = day+"/"+month+"/"+year;
                         mcreateweightdate.setText(date);
@@ -81,27 +86,31 @@ public class CreateWeight extends AppCompatActivity {
             public void onClick(View view) {
                 String weight = mcreateweight.getText().toString();
                 String date = mcreateweightdate.getText().toString();
-                if(weight.isEmpty() || date.isEmpty())
+                if(date.isEmpty() || weight.isEmpty())
                 {
-                    Toast.makeText(getApplicationContext(),"Vui lòng nhập đủ thông tin", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateWeight.this,"Vui lòng nhập đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
+                    mcreateprogressbar.setVisibility(View.VISIBLE);
+
                     DocumentReference documentReference = firebaseFirestore.collection("weights").document(firebaseUser.getUid()).collection("myWeights").document();
                     Map<String, Object> cannang = new HashMap<>();
-                    cannang.put("weight", weight);
+                    cannang.put("weight", weight + " kg");
                     cannang.put("date",date);
 
                     documentReference.set(cannang).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
                             Toast.makeText(getApplicationContext(),"Thêm thành công",Toast.LENGTH_SHORT).show();
+                            mcreateprogressbar.setVisibility(View.INVISIBLE);
                             startActivity(new Intent(CreateWeight.this, WeightTrackerActivity.class));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Toast.makeText(getApplicationContext(),"Thêm thất bại",Toast.LENGTH_SHORT).show();
+                            mcreateprogressbar.setVisibility(View.INVISIBLE);
                         }
                     });
 

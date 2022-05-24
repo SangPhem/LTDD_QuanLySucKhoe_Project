@@ -21,16 +21,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAn">
         <activity
-<<<<<<< Updated upstream
-=======
+            android:name=".WeightDetails"
+            android:exported="false" />
+        <activity
+            android:name=".EditWeightActivity"
+            android:exported="false" />
+        <activity
             android:name=".CreateWeight"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".WeightTrackerActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +40,6 @@
             </intent-filter>
         </activity>
         <activity
->>>>>>> Stashed changes
             android:name=".BMIResultActivity"
             android:exported="false" />
         <activity
@@ -64,9 +65,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
