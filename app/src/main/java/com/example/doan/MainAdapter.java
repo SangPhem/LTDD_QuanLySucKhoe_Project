@@ -2,7 +2,6 @@ package com.example.doan;
 
 import android.content.Context;
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.doan.BMITracker.BMITrackerActivity;
 
 import java.util.List;
 
@@ -41,7 +42,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
         holder.title.setText(titles.get(position));
         holder.icon.setImageResource(images.get(position));
     }
-
     @Override
     public int getItemCount() {
         return titles.size();

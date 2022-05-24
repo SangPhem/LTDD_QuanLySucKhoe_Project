@@ -33,24 +33,22 @@
         <activity
             android:name=".WeightTrackerActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".BMIResultActivity"
+            android:name=".BMITracker.BMIResultActivity"
             android:exported="false" />
         <activity
-            android:name=".BMITrackerActivity"
+            android:name=".BMITracker.BMITrackerActivity"
             android:exported="false" />
         <activity
             android:name=".WaterTrackerActivity"
             android:exported="false" />
         <activity
             android:name=".CovidTrackerActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".HeartRateActivity"
             android:exported="false" />
@@ -65,7 +63,13 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

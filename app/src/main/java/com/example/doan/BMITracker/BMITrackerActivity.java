@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.BMITracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.example.doan.R;
 
 public class BMITrackerActivity extends AppCompatActivity {
 
@@ -40,44 +42,32 @@ public class BMITrackerActivity extends AppCompatActivity {
         card_male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (check1) {
 
-                    if (male_clk) {
+                male_text.setTextColor(Color.parseColor("#FFFFFF"));
+                card_male.setCardBackgroundColor(Color.parseColor("#2BC2B3"));
+                male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_male_96,0,0);
 
-                        male_text.setTextColor(Color.parseColor("#2BC2B3"));
-                        male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_male_96,0,0);
-                        male_clk = false;
-                        check2 = false;
 
-                    } else {
+                female_text.setTextColor(Color.parseColor("#000000"));
+                card_female.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
+                female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_women_96,0,0);
 
-                        male_text.setTextColor(Color.parseColor("#000000"));
-                        male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_male_96,0,0);
-                        male_clk = true;
-                        check2 = true;
-                    }
-                }
             }
         });
 
         card_female.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (check2) {
-                    if (female_clk) {
-                        female_text.setTextColor(Color.parseColor("#2BC2B3"));
-                        female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_women_96,0,0);
-                        female_clk = false;
-                        check1 = false;
-                    }
-                    else  {
 
-                        female_text.setTextColor(Color.parseColor("#000000"));
-                        female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_women_96,0,0);
-                        female_clk = true;
-                        check1 = true;
-                    }
-                }
+                female_text.setTextColor(Color.parseColor("#FFFFFF"));
+                card_female.setCardBackgroundColor(Color.parseColor("#2BC2B3"));
+                female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_women_96,0,0);
+
+
+                male_text.setTextColor(Color.parseColor("#000000"));
+                card_male.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
+                male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_women_96,0,0);
+
             }
         });
 

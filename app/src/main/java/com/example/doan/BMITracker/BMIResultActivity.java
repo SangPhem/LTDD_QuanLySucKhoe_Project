@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.BMITracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.doan.R;
 
 public class BMIResultActivity extends AppCompatActivity {
 
