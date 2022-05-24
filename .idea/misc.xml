@@ -25,6 +25,7 @@
         <entry key="..\:/Docx/Nam 3 HK 2/LTDD/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Docx/Nam 3 HK 2/LTDD/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/menu/weightmenu.xml" value="0.259375" />
         <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/drawable/circle.xml" value="0.4161458333333333" />
+        <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/activity_covid_tracker.xml" value="0.4" />
         <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/activity_heart_rate.xml" value="0.4" />
         <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/activity_login.xml" value="0.4" />
         <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/activity_main.xml" value="0.4" />
@@ -32,6 +33,7 @@
         <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/custom_dashboard_recyclerview.xml" value="0.4" />
         <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/item_product.xml" value="0.4" />
         <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/item_shop.xml" value="0.4" />
+        <entry key="..\:/Docx/Nam3HK2/LTDDHealthApp/DoAnGit/LTDD_QuanLySucKhoe_Project/app/src/main/res/layout/layout_item.xml" value="0.4" />
       </map>
     </option>
   </component>
