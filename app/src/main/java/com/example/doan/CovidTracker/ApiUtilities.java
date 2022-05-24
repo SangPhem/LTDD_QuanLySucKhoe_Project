@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.CovidTracker;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

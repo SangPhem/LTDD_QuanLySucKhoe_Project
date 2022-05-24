@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.WaterTracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.doan.R;
 import com.mikhaellopez.circularfillableloaders.CircularFillableLoaders;
 
 public class WaterTrackerActivity extends AppCompatActivity {

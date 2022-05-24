@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.HeartRateSensor;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -8,6 +8,8 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.doan.R;
 
 public class HeartBeatView extends View {
 //test

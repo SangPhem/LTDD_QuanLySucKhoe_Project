@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.CovidTracker;
 
 
 import android.graphics.Color;
@@ -13,12 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.doan.R;
 import com.hbb20.CountryCodePicker;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +39,7 @@ public class CovidTrackerActivity extends AppCompatActivity implements AdapterVi
      private List<ModelClass> modelClassList2;
      PieChart mpieChart;
      private RecyclerView recyclerView;
-   com.example.doan.Adapter adapter;
+   Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

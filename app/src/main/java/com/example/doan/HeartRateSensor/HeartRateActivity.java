@@ -1,10 +1,9 @@
-package com.example.doan;
+package com.example.doan.HeartRateSensor;
 
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.hardware.Camera;
@@ -17,7 +16,8 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
-import android.os.Bundle;
+
+import com.example.doan.R;
 
 public class HeartRateActivity extends AppCompatActivity {
 

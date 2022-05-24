@@ -35,14 +35,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-500dp">
-        <com.example.doan.HeartBeatView
+        <com.example.doan.HeartRateSensor.HeartBeatView
             android:id="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginTop="50dp">
-        </com.example.doan.HeartBeatView>
+        </com.example.doan.HeartRateSensor.HeartBeatView>
 
     </LinearLayout>
 

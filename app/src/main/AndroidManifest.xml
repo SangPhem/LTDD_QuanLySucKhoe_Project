@@ -21,17 +21,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAn">
         <activity
-            android:name=".WeightDetails"
+            android:name=".WeightTracker.WeightDetails"
             android:exported="false" />
         <activity
-            android:name=".EditWeightActivity"
+            android:name=".WeightTracker.EditWeightActivity"
             android:exported="false" />
         <activity
-            android:name=".CreateWeight"
+            android:name=".WeightTracker.CreateWeight"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".WeightTrackerActivity"
+            android:name=".WeightTracker.WeightTrackerActivity"
             android:exported="true">
 
         </activity>
@@ -42,18 +42,18 @@
             android:name=".BMITracker.BMITrackerActivity"
             android:exported="false" />
         <activity
-            android:name=".WaterTrackerActivity"
+            android:name=".WaterTracker.WaterTrackerActivity"
             android:exported="false" />
         <activity
-            android:name=".CovidTrackerActivity"
+            android:name=".CovidTracker.CovidTrackerActivity"
             android:exported="true" >
 
         </activity>
         <activity
-            android:name=".HeartRateActivity"
+            android:name=".HeartRateSensor.HeartRateActivity"
             android:exported="false" />
         <activity
-            android:name=".StepCounterActivity"
+            android:name=".StepCounter.StepCounterActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

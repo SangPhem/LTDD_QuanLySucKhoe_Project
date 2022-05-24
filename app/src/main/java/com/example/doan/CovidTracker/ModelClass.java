@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.CovidTracker;
 
 public class ModelClass {
     String cases,todayCases,deaths,todayDeaths,recovered,todayRecovered,active,country;

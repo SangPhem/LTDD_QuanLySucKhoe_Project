@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.HeartRateSensor;
 
 public abstract class ImageProcessing {
 

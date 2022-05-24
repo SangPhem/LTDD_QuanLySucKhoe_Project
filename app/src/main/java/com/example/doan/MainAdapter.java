@@ -12,6 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.doan.BMITracker.BMITrackerActivity;
+import com.example.doan.HeartRateSensor.HeartRateActivity;
+import com.example.doan.StepCounter.StepCounterActivity;
+import com.example.doan.WaterTracker.WaterTrackerActivity;
 
 import java.util.List;
 
@@ -65,7 +68,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
                     } else if(getAdapterPosition() == 1){
                         ctx.startActivity(new Intent(ctx, StepCounterActivity.class));
                     } else if(getAdapterPosition() == 2){
-                        ctx.startActivity(new Intent(ctx, HeartRateActivity .class));
+                        ctx.startActivity(new Intent(ctx, HeartRateActivity.class));
                     } else if(getAdapterPosition() == 3) {
                         ctx.startActivity(new Intent(ctx, BMITrackerActivity.class));
                     }

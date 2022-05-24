@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.CovidTracker;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import com.example.doan.R;
 
 import java.text.NumberFormat;
 import java.util.List;
