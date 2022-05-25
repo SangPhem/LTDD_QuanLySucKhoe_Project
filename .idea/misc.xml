@@ -30,11 +30,18 @@
         <entry key="..\:/LTDD Git/app/src/main/res/drawable/ic_logout.xml" value="0.15462962962962962" />
         <entry key="..\:/LTDD Git/app/src/main/res/drawable/ic_note.xml" value="0.15462962962962962" />
         <entry key="..\:/LTDD Git/app/src/main/res/drawable/ic_profile.xml" value="0.15462962962962962" />
+        <entry key="..\:/LTDD Git/app/src/main/res/layout/activity_bmiresult.xml" value="0.14175724637681159" />
+        <entry key="..\:/LTDD Git/app/src/main/res/layout/activity_bmitracker.xml" value="0.23324275362318841" />
+        <entry key="..\:/LTDD Git/app/src/main/res/layout/activity_food_details.xml" value="0.21041666666666667" />
+        <entry key="..\:/LTDD Git/app/src/main/res/layout/activity_food_rec.xml" value="0.24682971014492755" />
+        <entry key="..\:/LTDD Git/app/src/main/res/layout/activity_login.xml" value="0.23324275362318841" />
         <entry key="..\:/LTDD Git/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/LTDD Git/app/src/main/res/layout/card_view.xml" value="0.24682971014492755" />
         <entry key="..\:/LTDD Git/app/src/main/res/layout/fragment_hisactive.xml" value="0.25052083333333336" />
         <entry key="..\:/LTDD Git/app/src/main/res/layout/fragment_note.xml" value="0.23854166666666668" />
         <entry key="..\:/LTDD Git/app/src/main/res/layout/fragment_profile.xml" value="0.23854166666666668" />
         <entry key="..\:/LTDD Git/app/src/main/res/layout/layout_header_nav.xml" value="0.264" />
+        <entry key="..\:/LTDD Git/app/src/main/res/layout/list_item_single.xml" value="0.23777173913043478" />
         <entry key="..\:/LTDD Git/app/src/main/res/menu/menu_nav.xml" value="0.2" />
       </map>
     </option>

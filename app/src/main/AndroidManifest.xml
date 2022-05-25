@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAn">
         <activity
+            android:name=".FoodDetails"
+            android:exported="false" />
+        <activity
             android:name=".BMIResultActivity"
             android:exported="false" />
         <activity
@@ -32,9 +35,15 @@
         <activity
             android:name=".CovidTrackerActivity"
             android:exported="true" />
+        <activity
+            android:name=".FoodRecActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".HeartRateActivity"
             android:exported="false" />
@@ -55,7 +64,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

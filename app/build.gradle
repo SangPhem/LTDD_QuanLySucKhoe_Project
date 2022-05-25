@@ -54,7 +54,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore' // firestore
     implementation 'com.google.firebase:firebase-firestore:21.4.0'
 
-
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
 
     //material dialog
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
@@ -68,4 +69,7 @@ dependencies {
     implementation 'com.hbb20:ccp:2.5.1'
     implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
     implementation 'com.nineoldandroids:library:2.4.0'
+
+    //FirebaseUI for Cloud FireStore
+    implementation 'com.firebaseui:firebase-ui-firestore:6.2.0'
 }
