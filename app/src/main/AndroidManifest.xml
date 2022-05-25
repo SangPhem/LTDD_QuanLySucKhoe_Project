@@ -3,7 +3,8 @@
     package="com.example.doan">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <uses-feature android:name="android.hardware.sensor.stepcounter" />
     <uses-feature android:name="android.hardware.sensor.stepdetector" />
@@ -75,6 +76,12 @@
             android:exported="true" >
 
         </activity>
+        <activity
+            android:name=".FoodRecommend.FoodRecActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FoodRecommend.FoodDetails"
+            android:exported="false" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

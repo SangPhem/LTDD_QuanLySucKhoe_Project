@@ -1,36 +1,43 @@
-package com.example.doan;
+package com.example.doan.FoodRecommend;
 
-import android.app.AppComponentFactory;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.doan.MainActivity;
+import com.example.doan.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
-import com.squareup.picasso.Picasso;
 
 public class FoodRecActivity extends AppCompatActivity {
 
     private FirebaseFirestore firebaseFirestore;
     private RecyclerView mfirestoreList;
     private FirestoreRecyclerAdapter adapter;
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_food_rec);
+
+        toolbar = findViewById(R.id.toolbar_foodrec);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Chế độ ăn uống khỏe mạnh");
+
         firebaseFirestore = FirebaseFirestore.getInstance();
         mfirestoreList = findViewById(R.id.firestore_list);
 
@@ -60,7 +67,7 @@ public class FoodRecActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent intent = new Intent(view.getContext(), FoodDetails.class);
                         intent.putExtra("title", model.getTitle());
-                        intent.putExtra("descript", model.getDescrip());
+                        intent.putExtra("descrip", model.getDescrip());
                         intent.putExtra("image", model.getImage());
 
                         view.getContext().startActivities(new Intent[]{intent});
@@ -106,5 +113,16 @@ public class FoodRecActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         adapter.startListening();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.doan.CovidTracker.CovidTrackerActivity;
+import com.example.doan.FoodRecommend.FoodRecActivity;
 import com.example.doan.WeightTracker.CreateWeight;
 import com.example.doan.WeightTracker.FirebaseModel;
 import com.example.doan.WeightTracker.WeightTrackerActivity;
@@ -47,6 +48,7 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.scwang.wave.MultiWaveHeader;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -215,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (id == R.id.nav_food)
                 {
-//                    startActivity(new Intent(MainActivity.this, FoodRecActivity.class));
+                    startActivity(new Intent(MainActivity.this, FoodRecActivity.class));
 
                 }
                 else if (id == R.id.nav_logout)

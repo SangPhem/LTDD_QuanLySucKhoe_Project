@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -24,7 +25,6 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.profile_layout);
 
         imageView = findViewById(R.id.avatar);
-
         user = FirebaseAuth.getInstance().getCurrentUser();
         userID = user.getUid();
         userEmail = user.getEmail();

@@ -1,4 +1,4 @@
-package com.example.doan;
+package com.example.doan.FoodRecommend;
 
 public class FoodsModel {
     private String title;
