@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:checkableBehavior="single">
 
         <item android:id="@+id/nav_profile"
@@ -11,8 +12,16 @@
             android:icon="@drawable/ic_history">
         </item>
         <item android:id="@+id/nav_note"
-            android:title="@string/nav_note"
+            android:title="Ghi chú cân nặng"
             android:icon="@drawable/ic_note">
+        </item>
+        <item android:id="@+id/nav_covid"
+            android:title="Theo dõi Covid"
+            android:icon="@drawable/ic_baseline_coronavirus_24">
+        </item>
+        <item android:id="@+id/nav_food"
+            android:title="Món ăn theo ngày"
+            android:icon="@drawable/ic_baseline_fastfood_24">
         </item>
         <item android:id="@+id/nav_logout"
             android:title="@string/nav_logout"

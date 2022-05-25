@@ -8,9 +8,7 @@
     tools:context=".MainActivity">
 
 
-    <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -111,15 +109,30 @@
                     android:textColor="@color/black"></TextView>
 
                 <com.jjoe64.graphview.GraphView
+                    android:id="@+id/weight_graph"
                     android:layout_width="400dp"
                     android:layout_height="400dp"
-                    android:id="@+id/weight_graph"
                     android:layout_gravity="center">
 
                 </com.jjoe64.graphview.GraphView>
 
+                <ImageView
+                    android:id="@+id/covidimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/covidtracker"></ImageView>
 
+                <com.scwang.wave.MultiWaveHeader
+                    android:id="@+id/wave_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:scaleY="-1" />
             </LinearLayout>
+
+
 
         </ScrollView>
 
@@ -132,12 +145,6 @@
             app:menu="@menu/menu_nav"></com.google.android.material.navigation.NavigationView>
     </androidx.drawerlayout.widget.DrawerLayout>
 
-    <com.scwang.wave.MultiWaveHeader
-        android:id="@+id/wave_footer"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:scaleY="-1" />
     <ImageView
         android:id="@+id/image_logo"
         android:layout_width="64dp"

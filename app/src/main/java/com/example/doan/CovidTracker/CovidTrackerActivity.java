@@ -34,7 +34,7 @@ public class CovidTrackerActivity extends AppCompatActivity implements AdapterVi
      String country;
      TextView mfilter;
      Spinner spinner;
-     String[] types={"cases","deaths","recovered","active"};
+     String[] types={"Tổng ca","Tử vong","Phục hồi","Dương tính"};
      private List<ModelClass> modelClassList;
      private List<ModelClass> modelClassList2;
      PieChart mpieChart;

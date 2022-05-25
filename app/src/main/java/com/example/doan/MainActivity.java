@@ -22,8 +22,12 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.doan.CovidTracker.CovidTrackerActivity;
+import com.example.doan.WeightTracker.CreateWeight;
 import com.example.doan.WeightTracker.FirebaseModel;
 import com.example.doan.WeightTracker.WeightTrackerActivity;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -58,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
     List<Integer> images;
     MainAdapter mainAdapter;
     MultiWaveHeader waveHeader, waveFooter;
+
+    ImageView covidimg;
 
     FirebaseAuth auth;
     FirebaseFirestore firebaseFirestore;
@@ -137,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                         String date = doc.getDocument().getString("date");
                         Log.d("Check", "Weight: " + weights);
                         Log.d("Check", "Date: " + date);
-                        datapoints.add(weights,date);
+//                        datapoints.add(weights,date);
                     }
                 }
             }
@@ -146,6 +152,14 @@ public class MainActivity extends AppCompatActivity {
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>();
         graphView.addSeries(series);
 
+        covidimg = findViewById(R.id.covidimg);
+        covidimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CovidTrackerActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -177,17 +191,34 @@ public class MainActivity extends AppCompatActivity {
 
                 if (id == R.id.nav_profile)
                 {
-                    startActivity(new Intent(MainActivity.this,ProfileFragment.class));
+                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
                 }
                 else if (id == R.id.nav_hisactive)
                 {
                     startActivity(new Intent(MainActivity.this, WeightTrackerActivity.class));
 
-                }else if (id == R.id.nav_note)
+                }
+                else if (id == R.id.nav_note)
                 {
-                    startActivity(new Intent(MainActivity.this,NoteFragment.class));
+                    startActivity(new Intent(MainActivity.this, CreateWeight.class));
 
-                }else if (id == R.id.nav_logout)
+                }
+                else if (id == R.id.nav_covid)
+                {
+                    startActivity(new Intent(MainActivity.this, CovidTrackerActivity.class));
+
+                }
+                else if (id == R.id.nav_hisactive)
+                {
+                    startActivity(new Intent(MainActivity.this, WeightTrackerActivity.class));
+
+                }
+                else if (id == R.id.nav_food)
+                {
+//                    startActivity(new Intent(MainActivity.this, FoodRecActivity.class));
+
+                }
+                else if (id == R.id.nav_logout)
                 {
                     auth.signOut();
                     finish();

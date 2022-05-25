@@ -1,21 +1,32 @@
 package com.example.doan.StepCounter;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.icu.util.Calendar;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.doan.MainActivity;
 import com.example.doan.R;
+import com.example.doan.WeightTracker.EditWeightActivity;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class StepCounterActivity extends AppCompatActivity implements SensorEventListener {
 
@@ -24,12 +35,18 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
     private Sensor mStepCounter;
     private boolean isCounterSensorPresent;
     int stepCount = 0;
+    Toolbar toolbar;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_counter);
+
+        toolbar = findViewById(R.id.toolbar_stepactionbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Xem số bước chân");
 
         if(ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){ //ask for permission
@@ -53,8 +70,24 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
 
     }
 
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
+//        Calendar cal = Calendar.getInstance();
+//        cal.setTimeInMillis(System.currentTimeMillis());
+//        cal.set(Calendar.HOUR_OF_DAY, 23);
+//        cal.set(Calendar.MINUTE, 59);
+//        cal.set(Calendar.SECOND, 59);
+//        cal.set(Calendar.MILLISECOND, 00);
+
+        LocalDate localDate = LocalDate.parse("26/05/2022");
+
+        LocalDateTime startOfDay = localDate.atTime(LocalTime.MAX);
+        if(startOfDay == localDate.atTime(LocalTime.MAX))
+        {
+            stepCount = 0;
+        }
         if(sensorEvent.sensor == mStepCounter){
             stepCount = (int) sensorEvent.values[0];
             txtStepcounter.setText(String.valueOf(stepCount));
@@ -82,4 +115,14 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }

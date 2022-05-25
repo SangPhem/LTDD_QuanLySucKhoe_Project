@@ -46,10 +46,10 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        app:backgroundTint="@color/color_9"
-        app:tint="@color/white"
         android:src="@drawable/ic_baseline_edit_24"
-        app:maxImageSize="40dp">
+        app:backgroundTint="@color/color_9"
+        app:maxImageSize="40dp"
+        app:tint="@color/white">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 

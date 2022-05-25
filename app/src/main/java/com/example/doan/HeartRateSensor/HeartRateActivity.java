@@ -1,10 +1,12 @@
 package com.example.doan.HeartRateSensor;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
@@ -12,11 +14,14 @@ import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
+import com.example.doan.MainActivity;
 import com.example.doan.R;
 
 public class HeartRateActivity extends AppCompatActivity {
@@ -35,6 +40,8 @@ public class HeartRateActivity extends AppCompatActivity {
     private static int averageIndex = 0;
     private static final int averageArraySize = 4;
     private static final int[] averageArray = new int[averageArraySize];
+
+    Toolbar toolbar;
 
     public static enum TYPE {
         GREEN, RED
@@ -57,6 +64,11 @@ public class HeartRateActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_heart_rate);
+
+        toolbar = findViewById(R.id.toolbar_heartactionbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Cảm biến đo nhịp tim");
 
         preview = (SurfaceView) findViewById(R.id.preview);
         previewHolder = preview.getHolder();
@@ -190,7 +202,7 @@ public class HeartRateActivity extends AppCompatActivity {
                 camera.setPreviewDisplay(previewHolder);
                 camera.setPreviewCallback(previewCallback);
             } catch (Throwable t) {
-                Log.e("PreviewDemo-surfaceCallback", "Exception in setPreviewDisplay()", t);
+                Log.e("HeartBeat", "Exception in setPreviewDisplay()", t);
             }
         }
 
@@ -230,5 +242,16 @@ public class HeartRateActivity extends AppCompatActivity {
         }
 
         return result;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

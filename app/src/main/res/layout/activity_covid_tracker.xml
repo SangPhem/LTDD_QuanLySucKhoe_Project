@@ -33,7 +33,7 @@
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="@string/covid_19">
+                android:text="Covid-19 Tracking">
             </TextView>
 
 
@@ -80,25 +80,107 @@
                   android:layout_height="wrap_content"
                   android:layout_marginLeft="20dp"
                   android:orientation="horizontal">
-    <View
-    android:layout_width="15dp"
-    android:layout_height="15dp"
-        android:background="@drawable/viewbg"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/green">
+                <View
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                    android:background="@drawable/viewbg"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/green">
 
-    </View>
+                </View>
 
                   <TextView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:text="@string/active"
+                      android:text="Dương tính"
                       android:textColor="@color/white"
                       android:textStyle="bold"
                       android:textSize="15sp"
                       android:layout_marginLeft="10dp"
                       android:layout_gravity="center">
                   </TextView>
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="-99dp"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="30dp">
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@drawable/viewbg"
+                      android:layout_gravity="center"
+                      android:backgroundTint="@color/blue">
+
+                  </View>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Số ca đã phục hồi"
+                      android:textColor="@color/white"
+                      android:textStyle="bold"
+                      android:textSize="15sp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_gravity="center">
+                  </TextView>
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="-144dp"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="60dp">
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@drawable/viewbg"
+                      android:layout_gravity="center"
+                      android:backgroundTint="@color/red">
+
+                  </View>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Tử vong"
+                      android:textColor="@color/white"
+                      android:textStyle="bold"
+                      android:textSize="15sp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_gravity="center">
+                  </TextView>
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="-80dp"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="90dp">
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:background="@drawable/viewbg"
+                      android:layout_gravity="center"
+                      android:backgroundTint="@color/yellow">
+
+                  </View>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Tổng ca nhiễm"
+                      android:textColor="@color/white"
+                      android:textStyle="bold"
+                      android:textSize="15sp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_gravity="center">
+                  </TextView>
+
               </LinearLayout>
           </LinearLayout>
         </LinearLayout>
@@ -150,7 +232,7 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/total"
+    android:text="Tổng ca"
     android:textSize="15sp"
     android:textStyle="bold"
     android:layout_marginLeft="10dp"
@@ -230,7 +312,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/active"
+                            android:text="Dương tính"
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
@@ -310,7 +392,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/recovered"
+                            android:text="Đã phục hồi"
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
@@ -390,7 +472,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/deaths"
+                            android:text="Số ca tử vong"
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
@@ -466,7 +548,7 @@
             android:layout_weight="1"
             android:padding="5dp"
             android:textColor="@color/white"
-            android:text="@string/country"
+            android:text="Quốc gia"
             android:layout_marginLeft="20dp"
             android:textSize="15sp"
             android:textStyle="bold">
@@ -480,7 +562,7 @@
             android:layout_weight="1"
             android:padding="5dp"
             android:textColor="@color/white"
-            android:text="@string/cases"
+            android:text="Ca mắc"
             android:id="@+id/filter"
             android:textSize="15sp"
             android:textStyle="bold"
