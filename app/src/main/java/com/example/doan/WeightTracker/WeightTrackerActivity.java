@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.doan.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -37,6 +38,7 @@ public class WeightTrackerActivity extends AppCompatActivity {
     FloatingActionButton mcreateweight;
     private FirebaseAuth firebaseAuth;
     ImageView popupbtn;
+    Toolbar mActionBarToolbar;
 
     RecyclerView mrecyclerView;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
@@ -53,7 +55,9 @@ public class WeightTrackerActivity extends AppCompatActivity {
         mcreateweight = findViewById(R.id.createweight);
         firebaseAuth = FirebaseAuth.getInstance();
 
-//        getSupportActionBar().setTitle("Bảng lưu cân nặng");
+        mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        setSupportActionBar(mActionBarToolbar);
+        getSupportActionBar().setTitle("Bảng theo dõi cân nặng");
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -66,7 +70,7 @@ public class WeightTrackerActivity extends AppCompatActivity {
         });
 
         //truy van toi du lieu tuong ung khi khai bao ben CreateWeight "weights" vs "myWeights"
-        Query query = firebaseFirestore.collection("weights").document(firebaseUser.getUid()).collection("myWeights").orderBy("weight",Query.Direction.ASCENDING);
+        Query query = firebaseFirestore.collection("weights").document(firebaseUser.getUid()).collection("myWeights").orderBy("date",Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<FirebaseModel> alluserweights = new FirestoreRecyclerOptions.Builder<FirebaseModel>().setQuery(query, FirebaseModel.class).build();
 
@@ -179,5 +183,15 @@ public class WeightTrackerActivity extends AppCompatActivity {
         {
             weightAdapter.stopListening();
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home){
+            Intent intent = new Intent(this, EditWeightActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -11,12 +11,13 @@
         android:id="@+id/wave_header"
         android:layout_width="match_parent"
         android:layout_height="100dp" />
+
     <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/wave_footer"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/wave_footer"
-        android:scaleY="-1"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:scaleY="-1" />
 
     <ImageView
         android:id="@+id/image_logo"

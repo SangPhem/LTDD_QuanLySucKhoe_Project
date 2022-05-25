@@ -7,9 +7,9 @@
     tools:context=".WeightTracker.WeightDetails">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarweightdetails"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbarweightdetails"
         android:background="@color/white">
 
     </androidx.appcompat.widget.Toolbar>

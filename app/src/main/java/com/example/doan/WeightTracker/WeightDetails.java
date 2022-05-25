@@ -31,6 +31,7 @@ public class WeightDetails extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarweightdetails);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Cân nặng của bạn");
 
         Intent data = getIntent();
 
