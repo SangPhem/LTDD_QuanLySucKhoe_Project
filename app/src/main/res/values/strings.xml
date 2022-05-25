@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">DoAn</string>
 
+    <string name="nav_profile">Thông tin người dùng</string>
+    <string name="nav_hisactive">Hoạt động gần đây</string>
+    <string name="nav_note">Ghi chú</string>
+    <string name="nav_logout">Đăng xuất</string>
+
+
+
+
+
     <string name="online_pharmacy">Online\nPharmacy</string>
     <string name="hint_search">Tìm kiếm...</string>
     <string name="shop_by_category">Danh mục sản phẩm</string>
